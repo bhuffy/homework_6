@@ -35,7 +35,7 @@ export default function Footer() {
                     </div>
                     
                     <div class="span-12 text-center">
-                        <img class="footer__logo mt-7 mb-4" src="assets/images/logo.svg" alt="paw logo" />
+                        <img class="footer__logo mt-7 mb-4" src="images/logo.svg" alt="paw logo" />
                         <small class="display-block c-white">&copy; Muddy Paws Adventure Gear</small>
                     </div>
                 </div>
