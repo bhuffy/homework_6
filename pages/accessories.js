@@ -1,11 +1,12 @@
+import Head from 'next/head'
+import styles from '../styles/Home.module.css'
 import Link from 'next/link'
-import Head from 'next/Head'
 
-export default function FirstProduct() {
+export default function Home() {
   return (
     <>
-      <Head>
-        <title key="title">First Product | Muddy Paws Adventure Gear</title>
+    <Head>
+        <title key="title">Accessories | Muddy Paws Adventure Gear</title>
         <meta key="theme-color" name="theme-color" content="#ffffff" />
         <meta
             key="description"
@@ -25,12 +26,13 @@ export default function FirstProduct() {
         />
         <link key="favion" rel="icon" href="/favicon.ico" />
     </Head>
-      <h1>First Product</h1>
-      <h2>
-        <Link href="/">
-          <a>Back to home</a>
-        </Link>
-      </h2>
+    <div className={styles.container}>
+      <main className={styles.main}>
+        <h1 className={styles.title}>
+          Accessories
+        </h1>
+      </main>
+    </div>
     </>
   )
 }
