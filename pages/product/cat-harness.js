@@ -1,21 +1,56 @@
-import Link from 'next/link'
+import React, { useState, useContext } from 'react'
 import Head from 'next/Head'
+import Link from 'next/Link'
 
 import Header from '../../components/Header'
 import ProductHeader from '../../components/ProductHeader'
 import ProductCarousel from '../../components/ProductCarousel'
 
+import {CartContext} from '../../context/CartContext'
+
 export default function CatHarness() {
-    const colors = ['strawberry', 'blackberry', 'crazyberry', 'fire-orange'];
-    const sizes = ['tiny', 'small', 'medium', 'large'];
+    const SIZES = ['tiny', 'small', 'medium', 'large'];
+    const ITEM = {
+        id: 1,
+        src: 'images/cat-1.png',
+        alt: "cat harness",
+        name: "Cat Harness",
+        price: 125,
+        slug: "/product/cat-harness",
+        colors: ['strawberry', 'blackberry', 'crazyberry', 'fire-orange'],
+        sizes: ['tiny', 'small', 'medium', 'large'],
+    };
     
-    const colorOptions = colors.map((c) =>
+    // define product page state
+    const [quantity, setQuantity] = useState(1);
+    const [color, setColor] = useState(ITEM.colors[0]);
+    const [size, setSize] = useState(ITEM.sizes[0]);
+
+    // get cart context
+    const [cart, setCart] = useContext(CartContext);
+    
+    // list color options
+    const colorOptions = ITEM.colors.map((c) =>
         <span key={c} className={`color-box color-box--${c}`}></span>
     );
 
-    const sizeOptions = sizes.map((s) =>
+    // list size options
+    const sizeOptions = SIZES.map((s) =>
         <a key={s} href="#" className="product-select mr-2">{s}</a>
     );
+
+    // Add this item to cart
+    const addToCart = () => {
+        const cartItem = {
+            ...ITEM,
+            quantity, 
+            color,
+            size,
+        };
+        setCart([...cart, cartItem]);
+        console.log('Added to cart!');
+    }
+
   return (
     <>
       <Head>
@@ -42,9 +77,9 @@ export default function CatHarness() {
     <Header />
     <section className="product">
         <div className="grid">
-            <ProductHeader title="Cat Harness" />
+            <ProductHeader title={ITEM.name} />
             <ProductCarousel
-                images={['/images/cat-harness.png']}
+                images={[ITEM.src]}
             />
             
             <div className="span-4 flex-justify-start">
@@ -59,9 +94,7 @@ export default function CatHarness() {
             </div>
 
             <div className="span-4 flex-justify-center">
-                <Link href="#">
-                    <a className="btn btn--primary">Add To Cart +</a>
-                </Link>
+                <button onClick={addToCart} className="btn btn--primary">Add To Cart +</button>
             </div>
 
             <div className="span-4 flex-justify-end">

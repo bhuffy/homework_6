@@ -13,6 +13,6 @@ export default function CategoryHeader({ title }) {
     )
 }
 
-CategoryHeader.PropTypes = {
+CategoryHeader.propTypes = {
     title: PropTypes.string,
 }

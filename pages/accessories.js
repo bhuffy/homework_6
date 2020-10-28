@@ -1,6 +1,6 @@
-import Head from 'next/head'
+import Head from 'next/Head'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import Link from 'next/Link'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -11,6 +11,27 @@ import CategoryProducts from '../components/CategoryProducts'
 import CategoryProduct from '../components/CategoryProduct'
 
 export default function Accessories() {
+    const products = [
+        {
+            id: 1,
+            src: 'images/accessory-1.png',
+            alt: "water storage pack",
+            name: "Water Storage Pack",
+            price: 125,
+            slug: "/product/water-storage-pack",
+            colors: ['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal'],
+        },
+        {
+            id: 2,
+            src: 'images/accessory-2.png',
+            alt: "food storage pack",
+            name: "Food Storage Pack",
+            price: 125,
+            slug: "/product/food-storage-pack",
+            colors: ['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal'],
+        }
+    ];
+
     return (
         <>
         <Head>
@@ -40,22 +61,19 @@ export default function Accessories() {
             <Breadcrumb>Home / Accessories</Breadcrumb>
             <CategorySidebar />
             <CategoryProducts>
-                <CategoryProduct
-                    src={'images/accessory-1.png'}
-                    alt="water storage pack"
-                    name="Water Storage Pack"
-                    price="125"
-                    slug="/product/water-storage-pack"
-                    colors={['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal']}
-                />
-                <CategoryProduct
-                    src={'images/accessory-2.png'}
-                    alt="food storage pack"
-                    name="Food Storage Pack"
-                    price="125"
-                    slug="/product/food-storage-pack"
-                    colors={['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal']}
-                />
+            {
+                products.map((product) =>
+                    <CategoryProduct
+                        key={product.id}
+                        src={product.src}
+                        alt={product.alt}
+                        name={product.name}
+                        price={product.price}
+                        slug={product.slug}
+                        colors={product.colors}
+                    />
+                )
+            }
             </CategoryProducts>
         </main>
         <Footer />

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'next/link'
+import Link from 'next/Link'
 
 export default function Header() {
     return (
@@ -15,7 +15,7 @@ export default function Header() {
                         <Link href="/cats"><a className="nav__item">Cats</a></Link>
                         <Link href="/dogs"><a className="nav__item">Dogs</a></Link>
                         <Link href="/accessories"><a className="nav__item">Accessories</a></Link>
-                        <Link href="/"><a className="nav__item"><img  src="images/cart.svg" alt="shopping cart" /></a></Link>
+                        <Link href="/cart"><a className="nav__item"><img  src="/images/cart.svg" alt="shopping cart" /></a></Link>
                     </nav>
                 </header>
             </div>
