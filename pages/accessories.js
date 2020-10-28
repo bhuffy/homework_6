@@ -36,7 +36,7 @@ export default function Accessories() {
         </Head>
         <Header />
         <CategoryHeader title="accessories" />
-        <main class="category grid">
+        <main className="category grid">
             <Breadcrumb>Home / Accessories</Breadcrumb>
             <CategorySidebar />
             <CategoryProducts>

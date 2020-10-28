@@ -10,11 +10,11 @@ export default function CatHarness() {
     const sizes = ['tiny', 'small', 'medium', 'large'];
     
     const colorOptions = colors.map((c) =>
-        <span key={c} class={`color-box color-box--${c}`}></span>
+        <span key={c} className={`color-box color-box--${c}`}></span>
     );
 
     const sizeOptions = sizes.map((s) =>
-        <a key={s} href="#" class="product-select mr-2">{s}</a>
+        <a key={s} href="#" className="product-select mr-2">{s}</a>
     );
   return (
     <>
@@ -40,25 +40,31 @@ export default function CatHarness() {
         <link key="favion" rel="icon" href="/favicon.ico" />
     </Head>
     <Header />
-    <section class="product">
-        <div class="grid">
+    <section className="product">
+        <div className="grid">
             <ProductHeader title="Cat Harness" />
             <ProductCarousel
                 images={['/images/cat-harness.png']}
             />
             
-            <div class="span-4 flex-justify-start">
+            <div className="span-4 flex-justify-start">
                 <div>
                     { sizeOptions }
-                    <a href="#" class=" c-neutral-600"><p class="mt-2">What's my pet size?</p></a>
+                    <Link href="#">
+                        <a className=" c-neutral-600">
+                            <p className="mt-2">What's my pet size?</p>
+                        </a>
+                    </Link>
                 </div>
             </div>
 
-            <div class="span-4 flex-justify-center">
-                <p><a class="btn btn--primary" href="#">Add To Cart +</a></p>
+            <div className="span-4 flex-justify-center">
+                <Link href="#">
+                    <a className="btn btn--primary">Add To Cart +</a>
+                </Link>
             </div>
 
-            <div class="span-4 flex-justify-end">
+            <div className="span-4 flex-justify-end">
                 { colorOptions }
             </div>
         </div>

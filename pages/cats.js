@@ -37,7 +37,7 @@ export default function Cats() {
 
             <Header />
             <CategoryHeader title="cats" />
-            <main class="category grid">
+            <main className="category grid">
                 <Breadcrumb>Home / Cats</Breadcrumb>
                 <CategorySidebar />
                 <CategoryProducts>

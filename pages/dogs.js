@@ -37,7 +37,7 @@ export default function Dogs() {
 
             <Header />
             <CategoryHeader title="dogs" />
-            <main class="category grid">
+            <main className="category grid">
                 <Breadcrumb>Home / Dogs</Breadcrumb>
                 <CategorySidebar />
                 <CategoryProducts>

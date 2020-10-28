@@ -1,20 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 export default function CategoryProduct({ src, alt, name, slug, price, colors }) {
 
     const colorOptions = colors.map((c) =>
-        <span key={c} class={`color-box color-box--${c}`}></span>
+        <span key={c} className={`color-box color-box--${c}`}></span>
     );
 
     return (
         <>
-            <div class="my-5">
-                <a class="c-off-black" href={slug}>
-                    <img src={src} alt={alt} />
-                    <h3 class="mb-1">{name}</h3>
-                    <p class="mb-2">${price} • Strawberry</p>
-                </a>
+            <div className="my-5">
+                <Link href={slug}>
+                    <a className="c-off-black">
+                        <img src={src} alt={alt} />
+                        <h3 className="mb-1">{name}</h3>
+                        <p className="mb-2">${price} • Strawberry</p>
+                    </a>
+                </Link>
                 <div>
                     {colorOptions}
                 </div>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default function CategoryProducts({ children }) {
     return (
-        <div class="category__content">
+        <div className="category__content">
             { children }
         </div>
     )

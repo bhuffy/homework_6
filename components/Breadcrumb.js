@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 export default function Breadcrumb({children}) {
     return (
         <>
-            <p class="mt-5 span-12">{ children }</p>
+            <p className="mt-5 span-12">{ children }</p>
         </>
     )
 }
