@@ -9,9 +9,9 @@ export default function Footer() {
                         <nav class="span-3">
                             <p class="footer__title">Shop</p>
                             <ul class="footer__nav">
-                                <li class="footer__item"><a class="nav__item" href="cats.html">Cats</a></li>
-                                <li class="footer__item"><a class="nav__item" href="dogs.html">Dogs</a></li>
-                                <li class="footer__item"><a class="nav__item" href="accessories.html">Accessories</a></li>
+                                <li class="footer__item"><a class="nav__item" href="cats">Cats</a></li>
+                                <li class="footer__item"><a class="nav__item" href="dogs">Dogs</a></li>
+                                <li class="footer__item"><a class="nav__item" href="accessories">Accessories</a></li>
                             </ul>
                         </nav>
                         <nav class="span-3">

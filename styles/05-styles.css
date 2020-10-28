@@ -213,11 +213,14 @@ footer {
 .category-header {
   position: relative;
   height: 40vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../public/images/cat-harness.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: var(--off-black); /* if img not available */
+}
+
+.category-header--cats {
+background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../public/images/cat-harness.jpeg");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: var(--off-black); /* if img not available */
 }
 
 .category-header--dogs {
