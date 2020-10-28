@@ -48,7 +48,6 @@ export default function CatHarness() {
             size,
         };
         setCart([...cart, cartItem]);
-        console.log('Added to cart!');
     }
 
   return (

@@ -14,7 +14,7 @@ export default function Dogs() {
     const products = [
         {
             id: 1,
-            src: 'images/dog-1.png',
+            src: '/images/dog-1.png',
             alt: "dog harness",
             name: "Dog Harness",
             price: 125,
@@ -23,7 +23,7 @@ export default function Dogs() {
         },
         {
             id: 2,
-            src: 'images/dog-2.png',
+            src: '/images/dog-2.png',
             alt: "water storage pack",
             name: "Water Storage Pack",
             price: 125,
@@ -32,7 +32,7 @@ export default function Dogs() {
         },
         {
             id: 3,
-            src: 'images/dog-3.png',
+            src: '/images/dog-3.png',
             alt: "food storage pack",
             name: "Food Storage Pack",
             price: 125,

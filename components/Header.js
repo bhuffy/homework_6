@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Link from 'next/Link'
 
+import { CartContext } from '../context/CartContext'
+
 export default function Header() {
+    const [cart, setCart] = useContext(CartContext);
     return (
         <>
             <div className="grid bg-white">
@@ -15,7 +18,12 @@ export default function Header() {
                         <Link href="/cats"><a className="nav__item">Cats</a></Link>
                         <Link href="/dogs"><a className="nav__item">Dogs</a></Link>
                         <Link href="/accessories"><a className="nav__item">Accessories</a></Link>
-                        <Link href="/cart"><a className="nav__item"><img  src="/images/cart.svg" alt="shopping cart" /></a></Link>
+                        <Link href="/cart">
+                            <a className="nav__item nav__cart">
+                                <img  src="/images/cart.svg" alt="shopping cart" />
+                                <span className="nav__count">{cart.length}</span>
+                            </a>
+                        </Link>
                     </nav>
                 </header>
             </div>

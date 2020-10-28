@@ -33,6 +33,65 @@
   margin-right: 0;
 }
 
+.nav__cart {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__count {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.cart__line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-4);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--space-1);
+}
+
+.cart-item__content {
+  display: flex;
+}
+
+.cart-item__cross {
+  cursor: pointer;
+}
+
+.cart-item__img {
+  max-width: 200px;
+  height: auto;
+}
+
+.cart-item__color-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-item__color {
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+}
+
+.cart-item__color--strawberry { background-color: var(--strawberry); }
+.cart-item__color--blackberry { background-color: var(--blackberry); }
+.cart-item__color--crazyberry { background-color: var(--crazyberry); }
+.cart-item__color--fire-orange { background-color: var(--fire-orange); }
+.cart-item__color--lightberry { background-color: var(--lightberry); }
+.cart-item__color--teal { background-color: var(--teal); }
+
 .logo {
   width: var(--space-10);
 }
@@ -239,6 +298,10 @@ background-color: var(--off-black); /* if img not available */
   background-color: var(--off-black); /* if img not available */
 }
 
+.category-header--cart {
+  background-color: var(--off-black); /* if img not available */
+}
+
 .category-header__content {
   position: absolute;
   top: 60%;
@@ -391,4 +454,30 @@ background-color: var(--off-black); /* if img not available */
 .align-items-center {
   display: flex;
   align-items: center;
+}
+
+/* ============================== */
+
+.cart__items {
+  grid-column: span 8;
+  margin-right: var(--space-7);
+}
+
+.cart__summary {
+  grid-column: span 4;
+}
+
+input {
+  display: block;
+  margin-top: var(--space-2);
+  margin-bottom: var(--space-2);
+  padding: var(--space-3);
+  border: none;
+  background-color: var(--neutral-100);
+  border-radius: var(--space-1);
+  width: 100%;
+}
+
+input[type="text"]:hover {
+  background-color: var(--neutral-200);
 }

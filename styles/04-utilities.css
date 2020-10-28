@@ -195,6 +195,7 @@
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
+.bold { font-weight: 700 }
 
 /* display */
 .display-block { display: block; }
@@ -205,6 +206,7 @@
     grid-template-columns: repeat(12, 1fr);
     margin-left: 5%;
     margin-right: 5%;
+    grid-gap: 20px;
 }
 
 .home-grid {

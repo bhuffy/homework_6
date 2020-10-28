@@ -14,7 +14,7 @@ export default function Cats() {
     const products = [
         {
             id: 1,
-            src: 'images/cat-1.png',
+            src: '/images/cat-1.png',
             alt: "cat harness",
             name: "Cat Harness",
             price: 125,
@@ -23,7 +23,7 @@ export default function Cats() {
         },
         {
             id: 2,
-            src: 'images/cat-2.png',
+            src: '/images/cat-2.png',
             alt: "water storage pack",
             name: "Water Storage Pack",
             price: 125,
@@ -32,7 +32,7 @@ export default function Cats() {
         },
         {
             id: 3,
-            src: 'images/cat-3.png',
+            src: '/images/cat-3.png',
             alt: "food storage pack",
             name: "Food Storage Pack",
             price: 125,
