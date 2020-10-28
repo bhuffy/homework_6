@@ -46,6 +46,7 @@ export default function Dogs() {
                         alt="dog harness"
                         name="Dog Harness"
                         price="125"
+                        slug="/product/dog-harness"
                         colors={['strawberry', 'blackberry', 'crazyberry', 'fire-orange']}
                     />
                     <CategoryProduct
@@ -53,6 +54,7 @@ export default function Dogs() {
                         alt="water storage pack"
                         name="Water Storage Pack"
                         price="125"
+                        slug="/product/water-storage-pack"
                         colors={['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal']}
                     />
                     <CategoryProduct
@@ -60,6 +62,7 @@ export default function Dogs() {
                         alt="food storage pack"
                         name="Food Storage Pack"
                         price="125"
+                        slug="/product/food-storage-pack"
                         colors={['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal']}
                     />
                 </CategoryProducts>

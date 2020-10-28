@@ -45,6 +45,7 @@ export default function Accessories() {
                     alt="water storage pack"
                     name="Water Storage Pack"
                     price="125"
+                    slug="/product/water-storage-pack"
                     colors={['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal']}
                 />
                 <CategoryProduct
@@ -52,6 +53,7 @@ export default function Accessories() {
                     alt="food storage pack"
                     name="Food Storage Pack"
                     price="125"
+                    slug="/product/food-storage-pack"
                     colors={['strawberry', 'blackberry', 'crazyberry', 'fire-orange', 'lightberry', 'teal']}
                 />
             </CategoryProducts>
