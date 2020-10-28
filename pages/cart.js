@@ -71,15 +71,15 @@ export default function Cart() {
                 </CartItems>
                 <div className="cart__summary">
                     <h2>Summary</h2>
-                    <div className="cart__line mb-5">
+                    <div className="cart__line mb-4">
                         <span className="bold">Subtotal</span>
                         <span>${totalPrice}.00</span>
                     </div>
-                    <div className="cart__line mb-5">
+                    <div className="cart__line mb-4">
                         <span className="bold">Estimated Shipping</span>
                         <span>FREE</span>
                     </div>
-                    <div className="cart__line mb-5">
+                    <div className="cart__line mb-4">
                         <span className="bold">Estimated Tax</span>
                         <span>–</span>
                     </div>

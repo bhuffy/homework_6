@@ -1,5 +1,4 @@
 import Head from 'next/Head'
-import styles from '../styles/Home.module.css'
 import Link from 'next/Link'
 
 import Header from '../components/Header'
