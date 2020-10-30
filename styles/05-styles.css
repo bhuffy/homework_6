@@ -357,10 +357,20 @@ footer {
 }
 
 .color-box {
-    display: inline-block;
-    height: 40px;
-    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    width: 48px;
     cursor: pointer;
+}
+
+.color-box--active {
+    border: 3px solid var(--neutral-300);
+}
+
+.color-box:not(:last-child) {
+    margin-right: var(--space-2);
 }
 
 .color-box--strawberry { background-color: var(--strawberry); }
@@ -457,8 +467,13 @@ footer {
 }
 
 .product__img {
-    width: 60%;
+    width: 100%;
 }
+
+.product__img--tiny { transform: scale(0.55)}
+.product__img--small { transform: scale(0.70)}
+.product__img--medium { transform: scale(0.85)}
+.product__img--large { transform: scale(1)}
 
 .product-select {
     padding: var(--space-3);
@@ -466,6 +481,11 @@ footer {
     background-color: var(--neutral-900);
     text-decoration: none;
     display: inline-block;
+}
+
+.product-select--active {
+    background-color: var(--neutral-900);
+    box-shadow: 0 0 0 2px white;
 }
 
 /* flex */
@@ -487,6 +507,13 @@ footer {
 .flex-column-center {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flex-row-center {
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: flex-start;
 }
@@ -522,6 +549,10 @@ input[type="text"]:hover {
     background-color: var(--neutral-200);
 }
 
+
+/* ============================== */
+
+
 .quantity-btn {
     display: inline-block;
     color: white;
@@ -547,4 +578,33 @@ input[type="text"]:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/* ============================== */
+
+.color-checkmark {
+    display:inline-block;
+    width: 24px;
+    height:24px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+.color-checkmark-stem {
+    position: absolute;
+    width: 4px;
+    height: 24px;
+    background-color: white;
+    left: 12px;
+    top: 0px;
+}
+
+.color-checkmark-kick {
+    position: absolute;
+    width: 12px;
+    height: 4px;
+    background-color:white;
+    left: 4px;
+    top: 20px;
 }

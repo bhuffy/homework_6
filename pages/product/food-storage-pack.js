@@ -9,15 +9,15 @@ import Checkmark from '../../components/Checkmark'
 
 import {CartContext} from '../../context/CartContext'
 
-export default function CatHarness() {
+export default function FoodStoragePack() {
     const SIZES = ['tiny', 'small', 'medium', 'large'];
     const ITEM = {
         id: 1,
-        src: 'images/cat-1.png',
-        alt: "cat harness",
-        name: "Cat Harness",
+        src: 'images/accessory-1.png',
+        alt: "food storage pack",
+        name: "Food Storage Pack",
         price: 25,
-        slug: "/product/cat-harness",
+        slug: "/product/food-storage-pack",
         colors: ['strawberry', 'blackberry', 'crazyberry', 'fire-orange'],
         sizes: ['tiny', 'small', 'medium', 'large'],
     };
@@ -64,7 +64,7 @@ export default function CatHarness() {
   return (
     <>
       <Head>
-        <title key="title">Cat Harness | Muddy Paws Adventure Gear</title>
+        <title key="title">Food Storage Pack | Muddy Paws Adventure Gear</title>
         <meta key="theme-color" name="theme-color" content="#ffffff" />
         <meta
             key="description"
@@ -111,7 +111,6 @@ export default function CatHarness() {
                     <input className="quantity-input mx-2" type="number" min="1" value={quantity} onChange={handleQuantityInput} />
                     <button className="quantity-btn" onClick={() => {if (quantity - 1 > 0) {setQuantity(quantity - 1)}}} >-</button>
                 </div>
-
                 <button onClick={addToCart} className="btn btn--primary">Add To Cart +</button>
             </div>
 

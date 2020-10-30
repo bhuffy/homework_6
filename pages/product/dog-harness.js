@@ -9,15 +9,15 @@ import Checkmark from '../../components/Checkmark'
 
 import {CartContext} from '../../context/CartContext'
 
-export default function CatHarness() {
+export default function DogHarness() {
     const SIZES = ['tiny', 'small', 'medium', 'large'];
     const ITEM = {
         id: 1,
-        src: 'images/cat-1.png',
-        alt: "cat harness",
-        name: "Cat Harness",
+        src: 'images/dog-1.png',
+        alt: "dog harness",
+        name: "Dog Harness",
         price: 25,
-        slug: "/product/cat-harness",
+        slug: "/product/dog-harness",
         colors: ['strawberry', 'blackberry', 'crazyberry', 'fire-orange'],
         sizes: ['tiny', 'small', 'medium', 'large'],
     };
@@ -64,7 +64,7 @@ export default function CatHarness() {
   return (
     <>
       <Head>
-        <title key="title">Cat Harness | Muddy Paws Adventure Gear</title>
+        <title key="title">Dog Harness | Muddy Paws Adventure Gear</title>
         <meta key="theme-color" name="theme-color" content="#ffffff" />
         <meta
             key="description"
