@@ -31,13 +31,20 @@ export default function CatHarness() {
     
     // list color options
     const colorOptions = ITEM.colors.map((c) =>
-        <span key={c} className={`color-box color-box--${c}`}></span>
+        <button key={c} onClick={() => setColor(c)} className={`color-box color-box--${c}`}></button>
     );
 
     // list size options
     const sizeOptions = SIZES.map((s) =>
-        <a key={s} href="#" className="product-select mr-2">{s}</a>
+        <button key={s} onClick={() => setSize(s)} href="#" className="product-select mr-2">{s}</button>
     );
+
+    // handle quantity input change
+    const handleQuantityInput = (e) => {
+        if (e.target.value > 0) {
+            setQuantity(e.target.value);
+        }
+    }
 
     // Add this item to cart
     const addToCart = () => {
@@ -48,6 +55,7 @@ export default function CatHarness() {
             size,
         };
         setCart([...cart, cartItem]);
+        setQuantity(1);
     }
 
   return (
@@ -92,7 +100,13 @@ export default function CatHarness() {
                 </div>
             </div>
 
-            <div className="span-4 flex-justify-center">
+            <div className="span-4 flex-justify-center flex-column-center">
+                <div className="flex-horizontal-center mb-4">
+                    <button className="quantity-btn" onClick={() => {if (quantity + 1 > 0) {setQuantity(quantity + 1)}}} >+</button>
+                    <input className="quantity-input mx-2" type="number" min="1" value={quantity} onChange={handleQuantityInput} />
+                    <button className="quantity-btn" onClick={() => {if (quantity - 1 > 0) {setQuantity(quantity - 1)}}} >-</button>
+                </div>
+
                 <button onClick={addToCart} className="btn btn--primary">Add To Cart +</button>
             </div>
 

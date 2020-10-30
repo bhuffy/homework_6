@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-export default function CartItem({ id, src, alt, name, slug, price, color, size, onRemove }) {
+export default function CartItem({ id, src, alt, name, slug, price, color, size, quantity, onRemove }) {
+    // set quantity
+    const [itemQuantity, setItemQuantity] = useState(quantity);
     
+    // get cart context
+    // const [cart, setCart] = useContext(CartContext);
+
+    // increase quantity input change
+    const handleIncreaseQuantity = () => {
+        if (itemQuantity + 1 > 0) {
+            setItemQuantity(itemQuantity + 1);
+        }
+        // need to update cart
+        // cart[id].quantity(itemQuantity);
+        // const updatedCart = [];
+        // setCart(updatedCart);
+    }
+
+    // decrease quantity input change
+    const handleDecreaseQuantity = () => {
+        if (itemQuantity - 1 > 0) {
+            setItemQuantity(itemQuantity - 1);
+        }
+        // need to update cart
+        // cart[id].quantity(itemQuantity);
+        // const updatedCart = [];
+        // setCart(updatedCart);
+    }
+
     return (
         <>
             <div className="cart-item my-5">
@@ -17,7 +44,11 @@ export default function CartItem({ id, src, alt, name, slug, price, color, size,
                         </div>
                         <small className="display-block my-2">${price}</small>
                         <small className="display-block my-2">Size: {size}</small>
-                        <small className="display-block my-2">Quantity</small>
+                        <small>
+                            <button className="cart-item__quantity-btn" onClick={handleIncreaseQuantity} >+</button>
+                            <span className="cart-item__quantity-input mx-1">{itemQuantity}</span>
+                            <button className="cart-item__quantity-btn" onClick={handleDecreaseQuantity}>-</button>
+                        </small>
                     </div>
                 </div>
                 <div onClick={() => onRemove(id)} className="cart-item__cross">
@@ -39,5 +70,6 @@ CartItem.propTypes = {
     price: PropTypes.number,
     color: PropTypes.string,
     size: PropTypes.string,
+    quantity: PropTypes.number,
     onRemove: PropTypes.func,
 }

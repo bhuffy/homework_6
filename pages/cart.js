@@ -18,10 +18,7 @@ export default function Cart() {
 
     // Add this item to cart
     const removeFromCart = (id) => {
-        console.log('remove from cart')
         const newCart = cart.filter((item) => item.id != id);
-        console.log("old cart", cart);
-        console.log("new cart", newCart);
         setCart(newCart);
     }
 

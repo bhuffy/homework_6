@@ -10,7 +10,7 @@ export default function ProductCarousel({ images }) {
                 </svg>
             </div>
             
-            <div className="span-8 flex-justify-center mb-7">
+            <div className="span-8 flex-justify-center">
                 <div className="product__img">
                     <img src="../images/cat-harness.png" alt="cat harness" />
                 </div>

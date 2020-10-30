@@ -199,6 +199,7 @@
 
 /* display */
 .display-block { display: block; }
+.display-inline-block { display: inline-block; }
 
 /* layout */
 .grid {

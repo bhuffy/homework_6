@@ -21,8 +21,8 @@ export default function Header() {
                         <Link href="/cart">
                             <a className="nav__item nav__cart">
                                 <img  src="/images/cart.svg" alt="shopping cart" />
-                                <span className="nav__count">{cart.length}</span>
-                            </a>
+                                <span className="nav__count">{cart.reduce(function(prev, curr) { return prev + curr.quantity;}, 0)}</span>
+                            </a>    
                         </Link>
                     </nav>
                 </header>
